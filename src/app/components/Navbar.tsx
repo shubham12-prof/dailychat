@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { CustomUser } from "../../app/api/auth/...nextauth/options";
+// import { CustomUser } from "../../app/api/auth/...nextauth/options";
 import LoginModal from "../components/auth/loginModel";
 export default function Navbar({ user }: { user: any }) {
   return (

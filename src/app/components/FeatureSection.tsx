@@ -4,12 +4,7 @@ import FeatureCard from "./FeatureCard";
 
 export default function FeatureSection() {
   return (
-    <section
-      id="features"
-      className="py-20 px-6 md:px-12 lg:px-20 bg-gray-50"
-    >
-      
-      {/* Heading */}
+    <section id="features" className="py-20 px-6 md:px-12 lg:px-20 bg-gray-50">
       <div className="text-center max-w-2xl mx-auto mb-16">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
           Powerful Features
@@ -19,7 +14,6 @@ export default function FeatureSection() {
         </p>
       </div>
 
-      {/* Cards */}
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <FeatureCard
           icon="🚀"
@@ -37,7 +31,6 @@ export default function FeatureSection() {
           description="Works on any device with a modern web browser."
         />
       </div>
-
     </section>
   );
 }
