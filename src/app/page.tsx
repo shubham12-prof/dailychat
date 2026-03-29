@@ -10,7 +10,7 @@ export default async function LandingPage() {
   const session: CustomSession | null = await getServerSession(authOptions);
   return (
     <div className="min-h-screen flex flex-col ">
-      <Navbar user={session?.user} />
+      <Navbar user={session?.user ?? null} />
 
       <HeroSection />
 
