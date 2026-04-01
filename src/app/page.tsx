@@ -1,10 +1,10 @@
 import { getServerSession } from "next-auth";
-import { authOptions, CustomSession } from "./api/auth/...nextauth/options";
-import FeatureSection from "./components/FeatureSection";
-import Footer from "./components/Footer";
-import HeroSection from "./components/HeroSection";
-import Navbar from "./components/Navbar";
-import UserReviews from "./components/UserReviews";
+import { authOptions, CustomSession } from "./api/auth/[...nextauth]/options";
+import FeatureSection from "../components/base/FeatureSection";
+import Footer from "../components/base/Footer";
+import HeroSection from "../components/base/HeroSection";
+import Navbar from "../components/base/Navbar";
+import UserReviews from "../components/base/UserReviews";
 
 export default async function LandingPage() {
   const session: CustomSession | null = await getServerSession(authOptions);

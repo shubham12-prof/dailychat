@@ -10,7 +10,7 @@ export default function LoginModal() {
   const handleGoogleLogin = async () => {
     signIn("google", {
       redirect: true,
-      callbackUrl: "/",
+      callbackUrl: "/dashboard",
     });
   };
 
