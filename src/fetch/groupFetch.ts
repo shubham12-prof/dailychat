@@ -1,7 +1,9 @@
 import { CHAT_GROUP, CHAT_GROUP_USERS } from "../lib/apiEndPoint";
 
 export async function fetchChatGroups(token: string) {
-  const res = await fetch(CHAT_GROUP, {
+  const url = CHAT_GROUP;
+
+  const res = await fetch(url, {
     headers: {
       Authorization: token,
     },
@@ -12,8 +14,11 @@ export async function fetchChatGroups(token: string) {
   });
 
   if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    const errorBody = await res.text();
+    console.error("fetchChatGroups error body:", errorBody);
+    throw new Error(`Failed to fetch data: ${res.status} - ${errorBody}`);
   }
+
   const response = await res.json();
   if (response?.data) {
     return response?.data;
@@ -36,14 +41,22 @@ export async function fetchChatGroup(id: string) {
   return null;
 }
 
-export async function fetchChatGroupUsers(id: string) {
-  const res = await fetch(`${CHAT_GROUP_USERS}?group_id=${id}`, {
+export async function fetchChatGroupUsers(id: string, token: string) {
+  const url = `${CHAT_GROUP_USERS}?group_id=${id}`;
+
+  const res = await fetch(url, {
+    headers: {
+      Authorization: token,
+    },
     cache: "no-store",
   });
 
   if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    const errorBody = await res.text();
+    console.error("fetchChatGroupUsers error body:", errorBody);
+    throw new Error(`Failed to fetch data: ${res.status} - ${errorBody}`);
   }
+
   const response = await res.json();
   if (response?.data) {
     return response?.data;

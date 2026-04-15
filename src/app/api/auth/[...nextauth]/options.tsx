@@ -39,13 +39,7 @@ export const authOptions: AuthOptions = {
           image: user?.image,
         };
 
-        console.log("Sending to LOGIN_URL:", LOGIN_URL);
-        console.log("Payload:", payload);
-
         const { data } = await axios.post(LOGIN_URL, payload);
-
-        console.log("Backend response:", data);
-
         user.id = data?.user?.id?.toString();
         user.token = data?.user?.token;
         user.provider = data?.user?.provider;

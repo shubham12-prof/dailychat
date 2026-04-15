@@ -18,7 +18,7 @@ export default function DeleteChatGroup({
   token: string;
 }) {
   const [loading, setLoading] = useState(false);
-  const router = useRouter(); // 👈 init router
+  const router = useRouter();
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
