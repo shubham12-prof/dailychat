@@ -18,9 +18,9 @@ export default function LoginModal() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="px-6 py-2 bg-black text-white rounded-xl hover:bg-gray-800 transition"
+        className=" py-2 bg-black text-white rounded-xl hover:bg-gray-800 transition"
       >
-        Getting start
+        Getting Started
       </button>
 
       {open && (
