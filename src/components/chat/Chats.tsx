@@ -67,7 +67,6 @@ export default function Chats({
               key={msg.id}
               className={`flex flex-col gap-1 ${isOwn ? "items-end" : "items-start"}`}
             >
-              {/* Sender name */}
               {!isOwn && (
                 <span className="text-xs text-zinc-400 dark:text-zinc-500 px-1">
                   {msg.name}

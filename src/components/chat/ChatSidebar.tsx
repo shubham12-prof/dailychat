@@ -24,7 +24,6 @@ export default function ChatSidebar({
 }) {
   return (
     <aside className="hidden md:flex flex-col h-screen w-64 shrink-0 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800">
-      {/* Header */}
       <div className="px-5 py-5 border-b border-slate-200 dark:border-slate-800 flex items-center gap-2">
         <h1 className="text-base font-bold text-slate-800 dark:text-slate-100 tracking-tight">
           Members
